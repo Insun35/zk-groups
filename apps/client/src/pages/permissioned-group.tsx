@@ -7,7 +7,7 @@ export default function PermissionedGroup(): JSX.Element {
     const { inviteCode } = useParams()
     const [_groupName, setGroupName] = useState<string>()
     const [_isRedeemed, setIsRedeemed] = useState<boolean>()
-    const { validateCode, redeemInvite } = usePermissionedGroups()
+    const { validateCode } = usePermissionedGroups()
     useEffect(() => {
         ;(async () => {
             const codeInfo = await validateCode(inviteCode)
@@ -19,7 +19,7 @@ export default function PermissionedGroup(): JSX.Element {
     }, [inviteCode, validateCode])
 
     async function joinGroup() {
-        await redeemInvite(inviteCode)
+        console.log("joined")
     }
 
     return (

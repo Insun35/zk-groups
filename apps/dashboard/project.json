@@ -21,7 +21,7 @@
                 ],
                 "styles": [],
                 "scripts": [],
-                "webpackConfig": "@nrwl/react/plugins/webpack"
+                "webpackConfig": "webpackConfig.js"
             },
             "configurations": {
                 "development": {
@@ -51,7 +51,8 @@
             "defaultConfiguration": "development",
             "options": {
                 "buildTarget": "dashboard:build",
-                "hmr": true
+                "hmr": true,
+                "webpackConfig": "webpackConfig.js"
             },
             "configurations": {
                 "development": {
